@@ -1,0 +1,26 @@
+body {
+  background: url('http://icdn3.digitaltrends.com/image/donald-trump-rushkoff-internet-8-1500x1000.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  min-height:100%;
+}
+
+.row {
+  height:100%;
+  min-height:100%;
+}
+
+#main {
+  height:100%;
+  min-height:100%;
+}
+
+#side {
+  background-color: #E91D0E;
+  opacity: 0.75;
+  height:100%;
+  min-height:100%;
+}
