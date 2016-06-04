@@ -14,13 +14,39 @@ body {
 }
 
 #main {
+  font-family: 'Montserrat';
   height:100%;
   min-height:100%;
 }
 
 #side {
+  font-family: 'Montserrat';
+  color: white;
   background-color: #E91D0E;
   opacity: 0.75;
+  border-left: 2px solid white;
   height:100%;
   min-height:100%;
+}
+
+
+.dropdown {
+  float: left;
+  padding: 30px;
+  margin-right: 20px
+  width: 0;
+  margin: 0;
+  border: 0;
+}
+
+h1 {
+
+}
+
+#header {
+  display: inline-block;
+  padding-left: 20%;
+  color: gray;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-size: 50px;
 }
