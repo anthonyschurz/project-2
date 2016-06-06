@@ -14,13 +14,13 @@ body {
 }
 
 #main {
-  font-family: 'Montserrat';
   height:100%;
   min-height:100%;
 }
 
 .side {
   color: white;
+  font-family: 'Nunito', sans-serif;
   background-color: rgba(233,29,14,0.55);
   border-left: 2px solid white;
   height:100%;
@@ -38,8 +38,8 @@ body {
 }
 
 #sideheader {
-  font-size: 20px;
-  padding-top: 20px;
+  font-size: 22px;
+  padding: 20px 15px 0 0;
   text-align: center;
 }
 
@@ -58,7 +58,7 @@ body {
 .opponents {
   width: 120px;
   margin: 20px 10px 10px 10px;
-  box-shadow: 0px 0px 0px 4px white;
+  box-shadow: 0px 0px 0px 2px white;
   border-radius: 50%;
   opacity: 1 !important;
 }
@@ -98,9 +98,9 @@ figcaption {
 
 #namegetter {
 	background-color:transparent;
-	-moz-border-radius:12px;
-	-webkit-border-radius:12px;
-	border-radius:12px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
 	border:2px solid white;
 	display:inline-block;
 	cursor:pointer;
