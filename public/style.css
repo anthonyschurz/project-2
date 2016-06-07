@@ -33,6 +33,7 @@ body {
 
 .dropdown {
   float: left;
+  font-family: 'Nunito', sans-serif;
   margin: 40px 0 40px 50px;
 }
 
@@ -64,7 +65,23 @@ body {
   margin: 20px 10px 10px 10px;
   box-shadow: 0px 0px 0px 2px white;
   border-radius: 50%;
-  opacity: 1 !important;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+.wrapper {
+   position: relative;
+}
+
+
+.wrapper .glyphicon {
+   position: absolute;
+   font-size: 30px;
+   padding: 64px 0 0 58px;
 }
 
 
@@ -72,6 +89,25 @@ figcaption {
   text-align: center;
   padding-bottom: 20px;
 }
+
+.modal-title {
+  color: #555;
+}
+
+
+.table {
+  margin: 30px 0 0 0;
+  color: #777
+}
+
+.glyphicon {
+  color: #337ab7 !important;
+}
+
+.glyphicon-pencil {
+  padding-right: 10px;
+}
+
 
 /*form styling*/
 
@@ -120,10 +156,9 @@ figcaption {
 /*social footer styling*/
 
 #footer {
-  position:fixed;
-  bottom:0px;
+  position:relative;
   width:100%;
-  padding: 0 0 20px 20px;
+  padding: 75px 0 20px 20px;
 }
 
 
