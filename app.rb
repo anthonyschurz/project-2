@@ -6,7 +6,7 @@ class TrumpApp < Sinatra::Base
 
   post '/nicknames' do
      name = Nickname.new(params[:name])
-     adjective = Adjective.find_by_letter(name.first_name[0].upcase)
+     adjective = Adjective.find_by_letter(name.last_name[0].upcase)
      tname = adjective.adjective
      name[:trump_name] = tname
 

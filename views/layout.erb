@@ -72,13 +72,16 @@
 
       <input type="text" class="form-control" placeholder="First Name" id="firstname" name="name[first_name]">
       <input type="text" class="form-control" placeholder="Last Name" id="lastname" name="name[last_name]">
-      <input type="submit" value="Bully Me" id="namegetter">
+      <input type="submit" value="Bully Me" id="bullyme">
 
     </form>
 
+
+    <div class="trumpname">
     <% if @name %>
-    <%= @name.trump_name %> <%= @name.first_name %>
+      OK, <%= @name.trump_name %> <%= @name.first_name.capitalize %>
     <% end %>
+    </div>
 
     <!-- Social Footer -->
 

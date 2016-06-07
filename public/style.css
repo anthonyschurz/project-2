@@ -26,7 +26,7 @@ body {
   font-family: 'Nunito', sans-serif;
   background-color: rgba(233,29,14,0.55);
   border-left: 2px solid white;
-  height:100%;
+  height:50em;
   min-height:100%;
 }
 
@@ -89,7 +89,7 @@ figcaption {
 }
 
 
-#namegetter {
+#bullyme {
 	background-color:transparent;
 	-moz-border-radius:8px;
 	-webkit-border-radius:8px;
@@ -107,14 +107,22 @@ figcaption {
 }
 
 
-#namegetter:hover {
+#bullyme:hover {
 	background-color: #5cb85c;
+}
+
+
+.trumpname {
+  font-size: 22px;
+  padding: 20px 20px 0 20px;
 }
 
 /*social footer styling*/
 
 #footer {
-  margin-top: 50%;
+  position:fixed;
+  bottom:0px;
+  width:100%;
   padding: 0 0 20px 20px;
 }
 
