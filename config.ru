@@ -2,4 +2,8 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-require './models/trumpname'
+require './models/nickname'
+require './models/adjective'
+require './app'
+
+run TrumpApp

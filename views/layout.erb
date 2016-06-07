@@ -6,9 +6,9 @@
   <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Diplomata' rel='stylesheet' type='text/css'>
   <!-- Official Trump Favicon -->
-  <link rel="shortcut icon" href="/Users/anthonyschurz/WDI29/project-2/public/favicon.png">
+  <link rel="shortcut icon" href="../favicon.png">
   <!-- Project CSS -->
-  <link rel="stylesheet" type="text/css" href="/Users/anthonyschurz/WDI29/project-2/public/style.css">
+  <link rel="stylesheet" type="text/css" href="../style.css">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <!-- Animation Lib -->
@@ -42,7 +42,7 @@
 
       <!-- Twitter Container -->
         <!-- <main>
-          <%= yield %>
+
         </main> -->
       <!-- End Twitter Container   -->
 
@@ -57,18 +57,18 @@
     <!-- Opponent Images -->
 
     <figure style="float: left;">
-      <img src="/Users/anthonyschurz/WDI29/project-2/public/hillary.png" alt="lying hilary" class="opponents"/>
+      <img src="../hillary.png" alt="lying hilary" class="opponents"/>
       <figcaption>Lying Hilary</figcaption>
     </figure>
 
     <figure style="float: left;">
-      <img src="/Users/anthonyschurz/WDI29/project-2/public/bernie.png" alt="crazy bernie" class="opponents"/>
+      <img src="../bernie.png" alt="crazy bernie" class="opponents"/>
       <figcaption>Crazy Bernie</figcaption>
     </figure>
 
     <!-- Nickname Form -->
 
-    <form action="/" method="POST">
+    <form action="/nicknames" method="POST">
 
       <input type="text" class="form-control" placeholder="First Name" id="firstname" name="name[first_name]">
       <input type="text" class="form-control" placeholder="Last Name" id="lastname" name="name[last_name]">
@@ -76,13 +76,16 @@
 
     </form>
 
+    <% if @name %>
+    <%= @name.trump_name %> <%= @name.first_name %>
+    <% end %>
 
     <!-- Social Footer -->
 
     <div id="footer">
-    <img src="/Users/anthonyschurz/WDI29/project-2/public/github.png" alt="github" class="social"/>
-    <img src="/Users/anthonyschurz/WDI29/project-2/public/twitter.png" alt="twitter" id="twitter"/>
-    <img src="/Users/anthonyschurz/WDI29/project-2/public/reddit.png" alt="reddit" class="social"/>
+    <img src="../github.png" alt="github" class="social"/>
+    <img src="../twitter.png" alt="twitter" id="twitter"/>
+    <img src="../reddit.png" alt="reddit" class="social"/>
   </div>
   </div>
 </div>
