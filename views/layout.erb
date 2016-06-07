@@ -6,7 +6,7 @@
   <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Diplomata' rel='stylesheet' type='text/css'>
   <!-- Official Trump Favicon -->
-  <link rel="shortcut icon" href="https://www.donaldjtrump.com/favicon.ico?v=1.1">
+  <link rel="shortcut icon" href="/Users/anthonyschurz/WDI29/project-2/public/favicon.png">
   <!-- Project CSS -->
   <link rel="stylesheet" type="text/css" href="/Users/anthonyschurz/WDI29/project-2/public/style.css">
   <!-- Bootstrap -->
@@ -14,26 +14,30 @@
   <!-- Animation Lib -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css">
 </head>
+
+
 <body>
+
+<!-- Main Body -->
 
   <div class="row">
     <div class="col-sm-9 col-xs-12" id="main">
-    <div id="header">
+    <div id="mainheader">
     <h1 style="font-size: 1.2em;">TRUMP API</h1>
     </div>
+
+<!-- Language Dropdown -->
+
     <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="glyphicon glyphicon-globe" aria-hidden="true" style="padding-right:2px;"></span>
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" >
         Language
-        <span class="glyphicon glyphicon-menu-down"></span>
+        <span class="caret"></span>
       </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href="#">English</a></li>
-          <li><a href="#">Spanish</a></li>
-        </ul>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">English</a></li>
+        <li><a href="#">Spanish</a></li>
+      </ul>
     </div>
-
-
 
 
       <!-- Twitter Container -->
@@ -41,35 +45,51 @@
           <%= yield %>
         </main> -->
       <!-- End Twitter Container   -->
+
+
     </div>
+
+    <!-- Right Sidebar -->
+
     <div class="col-sm-3 col-xs-12 side">
     <h3 id="sideheader">Get Your Trump Name</h3>
-      <figure style="float: left;">
-        <img src="/Users/anthonyschurz/WDI29/project-2/public/hilary.png" alt="lying hilary" class="opponents"/>
-        <figcaption>Lying Hilary</figcaption>
-      </figure>
 
-      <figure style="float: left;">
-        <img src="/Users/anthonyschurz/WDI29/project-2/public/bernie.png" alt="crazy bernie" class="opponents"/>
-        <figcaption>Crazy Bernie</figcaption>
-      </figure>
-      <div class="form-inline" role="form">
-        <input type="text" class="form-control" placeholder="First Name" id="firstname">
-      </div>
-      <div class="form-inline" role="form">
-        <input type="text" class="form-control" placeholder="Last Name" id="lastname">
-      </div>
-      <button id="namegetter">
-        Bully Me
-      </button>
-      <div id="footer">
-      <img src="/Users/anthonyschurz/WDI29/project-2/public/github.png" alt="github" class="social"/>
-      <img src="/Users/anthonyschurz/WDI29/project-2/public/twitter.png" alt="twitter" id="twitter"/>
-      <img src="/Users/anthonyschurz/WDI29/project-2/public/reddit.png" alt="reddit" class="social"/>
-    </div>
-    </div>
+    <!-- Opponent Images -->
+
+    <figure style="float: left;">
+      <img src="/Users/anthonyschurz/WDI29/project-2/public/hillary.png" alt="lying hilary" class="opponents"/>
+      <figcaption>Lying Hilary</figcaption>
+    </figure>
+
+    <figure style="float: left;">
+      <img src="/Users/anthonyschurz/WDI29/project-2/public/bernie.png" alt="crazy bernie" class="opponents"/>
+      <figcaption>Crazy Bernie</figcaption>
+    </figure>
+
+    <!-- Nickname Form -->
+
+    <form action="/" method="POST">
+
+      <input type="text" class="form-control" placeholder="First Name" id="firstname" name="name[first_name]">
+      <input type="text" class="form-control" placeholder="Last Name" id="lastname" name="name[last_name]">
+      <input type="submit" value="Bully Me" id="namegetter">
+
+    </form>
+
+
+    <!-- Social Footer -->
+
+    <div id="footer">
+    <img src="/Users/anthonyschurz/WDI29/project-2/public/github.png" alt="github" class="social"/>
+    <img src="/Users/anthonyschurz/WDI29/project-2/public/twitter.png" alt="twitter" id="twitter"/>
+    <img src="/Users/anthonyschurz/WDI29/project-2/public/reddit.png" alt="reddit" class="social"/>
   </div>
+  </div>
+</div>
 
+<!-- Javascripts -->
 
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>
