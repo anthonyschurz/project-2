@@ -4,17 +4,30 @@ class TrumpApp < Sinatra::Base
     erb :layout
   end
 
+  post '/hillary' do
+    Hillaryname.new(params[:hillary_name])
+    erb :layout
+  end
+
+  # post '/bernie'
+  #
+  # end
+
   post '/nicknames' do
-     name = Nickname.new(params[:name])
-     adjective = Adjective.find_by_letter(name.last_name[0].upcase)
-     tname = adjective.adjective
-     name[:trump_name] = tname
+
+    name = Nickname.new(params[:name])
+    description = Adjective.find_by_letter(name.last_name[0].upcase)
+    tname = description.adjective
+    name[:trump_name] = tname
+
+
 
      if name.save
-     @name = name
+       @name = name
      else
        redirect_to '/'
      end
+
      erb :layout
   end
 

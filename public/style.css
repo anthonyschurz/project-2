@@ -48,13 +48,9 @@ body {
 #mainheader {
   display: inline-block;
   color: #D4AF37;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-	font: 44px 'Diplomata';
-  padding: 10px 80px 0 80px;
+  -webkit-text-stroke: 2px black;
+	font: 65px 'Cinzel';
+  padding: 15px 85px 0 80px;
   text-align: center;
 }
 
@@ -90,6 +86,7 @@ figcaption {
   padding-bottom: 20px;
 }
 
+
 .modal-title {
   color: #555;
 }
@@ -100,12 +97,14 @@ figcaption {
   color: #777
 }
 
+
 .glyphicon {
   color: #337ab7 !important;
 }
 
+
 .glyphicon-pencil {
-  padding-right: 10px;
+  padding-right: 12px;
 }
 
 
