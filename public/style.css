@@ -50,7 +50,7 @@ body {
   color: #D4AF37;
   -webkit-text-stroke: 2px black;
 	font: 65px 'Cinzel';
-  padding: 15px 85px 0 80px;
+  padding: 10px 85px 0 80px;
   text-align: center;
 }
 
@@ -162,12 +162,11 @@ figcaption {
 
 
 .social {
-  height: 40px;
-  padding-right: 44px;
+  height: 35px;
+  padding-right: 25px;
 }
 
-
 #twitter {
-  height: 35px;
-  padding-right: 44px;
+  height: 30px;
+  padding-right: 25px;
 }
