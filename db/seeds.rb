@@ -1,28 +1,56 @@
 require './models/adjective.rb'
+require './models/hillaryname.rb'
+require './models/berniename.rb'
 
-Adjective.create(letter: "A", adjective: "Timid")
-Adjective.create(letter: "B", adjective: "Low-Energy")
-Adjective.create(letter: "C", adjective: "Lying")
-Adjective.create(letter: "D", adjective: "Weak")
-Adjective.create(letter: "E", adjective: "Boring")
-Adjective.create(letter: "F", adjective: "Overrated")
-Adjective.create(letter: "G", adjective: "Jealous")
-Adjective.create(letter: "H", adjective: "Moody")
-Adjective.create(letter: "I", adjective: "Repulsive")
-Adjective.create(letter: "J", adjective: "Yucky")
-Adjective.create(letter: "K", adjective: "Unreliable")
-Adjective.create(letter: "L", adjective: "Silly")
-Adjective.create(letter: "M", adjective: "Fussy")
-Adjective.create(letter: "N", adjective: "Ugly")
-Adjective.create(letter: "O", adjective: "Hideous")
-Adjective.create(letter: "P", adjective: "Dirty")
-Adjective.create(letter: "Q", adjective: "Moron")
-Adjective.create(letter: "R", adjective: "Little")
-Adjective.create(letter: "S", adjective: "Crazy")
-Adjective.create(letter: "T", adjective: "Cowardly")
-Adjective.create(letter: "U", adjective: "Vain")
-Adjective.create(letter: "V", adjective: "Clown")
-Adjective.create(letter: "W", adjective: "Goofy")
-Adjective.create(letter: "X", adjective: "Slob")
-Adjective.create(letter: "Y", adjective: "Tiny")
-Adjective.create(letter: "Z", adjective: "Flaccid")
+Adjective.destroy_all
+Hillaryname.destroy_all
+Berniename.destroy_all
+
+Adjective.create([
+
+    {letter: "A", adjective: "Timid"},
+    {letter: "B", adjective: "Low-Energy"},
+    {letter: "C", adjective: "Lying"},
+    {letter: "D", adjective: "Weak"},
+    {letter: "E", adjective: "Boring"},
+    {letter: "F", adjective: "Overrated"},
+    {letter: "G", adjective: "Jealous"},
+    {letter: "H", adjective: "Moody"},
+    {letter: "I", adjective: "Repulsive"},
+    {letter: "J", adjective: "Yucky"},
+    {letter: "K", adjective: "Unreliable"},
+    {letter: "L", adjective: "Silly"},
+    {letter: "M", adjective: "Fussy"},
+    {letter: "N", adjective: "Ugly"},
+    {letter: "O", adjective: "Hideous"},
+    {letter: "P", adjective: "Dirty"},
+    {letter: "Q", adjective: "Moron"},
+    {letter: "R", adjective: "Little"},
+    {letter: "S", adjective: "Crazy"},
+    {letter: "T", adjective: "Cowardly"},
+    {letter: "U", adjective: "Vain"},
+    {letter: "V", adjective: "Clown"},
+    {letter: "W", adjective: "Goofy"},
+    {letter: "X", adjective: "Slob"},
+    {letter: "Y", adjective: "Tiny"},
+    {letter: "Z", adjective: "Flaccid"}
+
+])
+
+
+Hillaryname.create([
+
+    {name: "Lying Hillary"},
+    {name: "Crooked Hillary"},
+    {name: "Incompetent Hillary"}
+
+])
+
+
+Berniename.create([
+
+    {name: "Crazy Bernie"},
+    {name: "Socialist Bernie"},
+    {name: "Bleeding Heart Bernie"}
+
+])

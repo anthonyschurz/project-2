@@ -1,7 +1,7 @@
 class CreateBernieNames < ActiveRecord::Migration
   def change
-      create_table :bernie_names do |t|
-        t.string :bernie_name
+      create_table :bernienames do |t|
+        t.string :name
         t.timestamps
   end
 end

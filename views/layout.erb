@@ -56,66 +56,8 @@
       <figcaption>Lying Hillary</figcaption>
     </figure>
 
-    <!-- HILLARY MODAL -->
 
-    <div class="modal fade" id="hillaryModal" tabindex="-1" role="dialog" aria-labelledby="hillaryModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="hillaryModalLabel">Nickname Hillary</h4>
-          </div>
-          <div class="modal-body">
-
-    <!-- HILLARY NAME FORM -->
-
-            <form action="/hillary" method="POST">
-            <input type="text" class="form-control" placeholder="Add Yours" name="hillarynames[hillary_name]">
-            </form>
-
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Created On</th>
-                  <th>Nickname</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>6.07.16</td>
-                  <td>Whatever</td>
-                  <td>
-                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>6.07.16</td>
-                  <td>Whatever</td>
-                  <td>
-                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>6.07.16</td>
-                  <td>Whatever</td>
-                  <td>
-                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= erb :modal %>
 
     <!-- BERNIE -->
 
@@ -128,64 +70,10 @@
       <figcaption>Crazy Bernie</figcaption>
     </figure>
 
-    <!-- BERNIE MODAL -->
-
-    <div class="modal fade" id="bernieModal" tabindex="-1" role="dialog" aria-labelledby="bernieModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="bernieModalLabel">Nickname Bernie</h4>
-          </div>
-          <div class="modal-body">
-            <input type="text" class="form-control" placeholder="Add Yours">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Created On</th>
-                  <th>Nickname</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>6.07.16</td>
-                  <td>Whatever</td>
-                  <td>
-                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>6.07.16</td>
-                  <td>Whatever</td>
-                  <td>
-                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>6.07.16</td>
-                  <td>Whatever</td>
-                  <td>
-                      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Nickname Form -->
 
-    <form action="/nicknames" method="POST">
+    <form action="/yournickname" method="POST">
 
       <input type="text" class="form-control" placeholder="First Name" id="firstname" name="name[first_name]">
       <input type="text" class="form-control" placeholder="Last Name" id="lastname" name="name[last_name]">
@@ -195,9 +83,11 @@
 
 
     <div class="trumpname">
+
     <% if @name %>
       OK, <%= @name.trump_name %> <%= @name.first_name.capitalize %>
     <% end %>
+
     </div>
 
     <!-- Social Footer -->
@@ -226,14 +116,6 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script>
-
-$( '.wrapper' ).hover(function () {
-    $( '.glyphicon-plus', this ).removeClass( 'hidden' );
-}, function () {
-    $( '.glyphicon-plus', this ).addClass('hidden');
-});
-
-</script>
+<script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>

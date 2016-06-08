@@ -23,14 +23,14 @@ ActiveRecord::Schema.define(version: 20160608005615) do
     t.datetime "updated_at"
   end
 
-  create_table "bernie_names", force: :cascade do |t|
-    t.string   "bernie_name"
+  create_table "bernienames", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "hillary_names", force: :cascade do |t|
-    t.string   "hillary_name"
+  create_table "hillarynames", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
