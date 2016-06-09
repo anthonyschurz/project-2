@@ -9,12 +9,12 @@ class TrumpApp < Sinatra::Base
     @hdate2 = Hillaryname.find(2).updated_at
     @hdate3 = Hillaryname.find(3).updated_at
 
-    @bname1 = Hillaryname.find(1).name
-    @bname2 = Hillaryname.find(2).name
-    @bname3 = Hillaryname.find(3).name
-    @bdate1 = Hillaryname.find(1).updated_at
-    @bdate2 = Hillaryname.find(2).updated_at
-    @bdate3 = Hillaryname.find(3).updated_at
+    @bname1 = Berniename.find(1).name
+    @bname2 = Berniename.find(2).name
+    @bname3 = Berniename.find(3).name
+    @bdate1 = Berniename.find(1).updated_at
+    @bdate2 = Berniename.find(2).updated_at
+    @bdate3 = Berniename.find(3).updated_at
 
     erb :layout
   end

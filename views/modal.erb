@@ -12,13 +12,13 @@
 <!-- HILLARY NAME FORM -->
 
         <form action="/hillary" method="POST">
-        <input type="text" class="form-control" placeholder="Add Yours" name="hillarynames[hillary_name]">
+        <input type="text" class="form-control" placeholder="Add Yours">
         </form>
 
-        <table class="table table-hover">
+        <table class="table table-hover" id="hillary-table">
           <thead>
             <tr>
-              <th>Updated On</th>
+              <th>Last Updated</th>
               <th>Nickname</th>
               <th>Actions</th>
             </tr>
@@ -91,7 +91,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>Created On</th>
+              <th>Last Updated</th>
               <th>Nickname</th>
               <th>Actions</th>
             </tr>
@@ -99,7 +99,7 @@
           <tbody>
             <tr>
               <td>
-                <%= @hdate1 %>
+                <%= @bdate1 %>
               </td>
 
               <td>
@@ -113,7 +113,7 @@
             </tr>
             <tr>
               <td>
-                <%= @hdate2 %>
+                <%= @bdate2 %>
               </td>
 
               <td>
@@ -127,7 +127,7 @@
             </tr>
             <tr>
               <td>
-                <%= @hdate3 %>
+                <%= @bdate3 %>
               </td>
 
               <td>

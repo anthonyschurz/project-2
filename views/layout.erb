@@ -34,8 +34,8 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="#">English</a></li>
-        <li><a href="#">Spanish</a></li>
+        <li><a href="/">English</a></li>
+        <li><span type="button" data-toggle="mexico">Spanish</span></li>
       </ul>
     </div>
     </div>
@@ -56,9 +56,6 @@
       <figcaption>Lying Hillary</figcaption>
     </figure>
 
-
-    <%= erb :modal %>
-
     <!-- BERNIE -->
 
     <figure style="float: left;">
@@ -70,6 +67,10 @@
       <figcaption>Crazy Bernie</figcaption>
     </figure>
 
+    <!-- MODALS -->
+
+    <%= erb :modal %>
+    <%= erb :mexico %>
 
     <!-- Nickname Form -->
 
@@ -93,6 +94,7 @@
     <!-- Social Footer -->
 
     <div id="footer">
+    <div id="container">
 
     <a href="https://github.com/anthonyschurz/project-2" target="_blank">
     <img src="../github.png" alt="github" class="social"/>
@@ -108,6 +110,7 @@
     <img src="../reddit.png" alt="reddit" class="social"/>
     </a>
 
+  </div>
   </div>
   </div>
 </div>
