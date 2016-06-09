@@ -8,13 +8,30 @@ $( '.wrapper' ).hover(function () {
     $( '.glyphicon-plus', this ).addClass( 'hidden' );
 });
 
-// Add row to table
+// Add row to Hillary table
 
 $('#newhname').keypress(function (e) {
  var key = e.which;
  if(key == 13)  // the enter key code
  {
-   $('#hillary-table > tbody > tr:first').before('<tr><td>column 1 value</td><td><input value="column two" readonly></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td></tr>');
+   $('#hillary-table > tbody > tr:first').before('<tr><td id="newesthdate"></td><td><input value = " " readonly id="newesthname"></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td></tr>');
+   $('#newesthname').val( $( this ).val() );
+
+   var today = new Date();
+   var dd = today.getDate();
+   var mm = today.getMonth()+1; //January is 0!
+   var yyyy = today.getFullYear();
+
+   if(dd<10) {
+     dd='0'+dd
+   }
+
+   if(mm<10) {
+      mm='0'+mm
+   }
+
+   today = mm + '.' + dd + '.' + yyyy;
+   $('#newesthdate').text( today );
  }
 });
 
