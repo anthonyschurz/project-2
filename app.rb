@@ -20,23 +20,16 @@ class TrumpApp < Sinatra::Base
   end
 
 
+# DESTROY HILLARY NICKNAME
 
-
-  post '/hillary' do
-    hname = Hillaryname.new(params[:hillary_name])
-
-    if hname.save
-      @hname = hname
-    else
-      redirect_to '/'
-    end
-
+  post '/hillary_d' do
+    @hname = Hillaryname.find(params[:hillary_name])
+    @hname.destroy
     erb :layout
   end
 
 
-
-
+# MAKE YOUR NICKNAME
 
   post '/yournickname' do
     name = Nickname.new(params[:name])

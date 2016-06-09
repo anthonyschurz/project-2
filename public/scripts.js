@@ -16,22 +16,45 @@ $('#newhname').keypress(function (e) {
  {
    $('#hillary-table > tbody > tr:first').before('<tr><td id="newesthdate"></td><td><input value = " " readonly id="newesthname"></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td></tr>');
    $('#newesthname').val( $( this ).val() );
-
+  //  Date
    var today = new Date();
    var dd = today.getDate();
-   var mm = today.getMonth()+1; //January is 0!
+   var mm = today.getMonth()+1;
    var yyyy = today.getFullYear();
 
    if(dd<10) {
      dd='0'+dd
    }
-
    if(mm<10) {
       mm='0'+mm
    }
-
    today = mm + '.' + dd + '.' + yyyy;
    $('#newesthdate').text( today );
+ }
+});
+
+// Add row to Bernie table
+
+$('#newbname').keypress(function (e) {
+ var key = e.which;
+ if(key == 13)  // the enter key code
+ {
+   $('#bernie-table > tbody > tr:first').before('<tr><td id="newestbdate"></td><td><input value = " " readonly id="newestbname"></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td></tr>');
+   $('#newestbname').val( $( this ).val() );
+  //  Date
+   var today = new Date();
+   var dd = today.getDate();
+   var mm = today.getMonth()+1;
+   var yyyy = today.getFullYear();
+
+   if(dd<10) {
+     dd='0'+dd
+   }
+   if(mm<10) {
+      mm='0'+mm
+   }
+   today = mm + '.' + dd + '.' + yyyy;
+   $('#newestbdate').text( today );
  }
 });
 
@@ -51,6 +74,8 @@ $( 'table' ).on('click','.glyphicon-remove',function(e){
 $( 'table' ).on('click','.glyphicon-pencil',function(e){
   e.preventDefault();
   $( this ).closest( 'tr' ).find( 'input' ).removeAttr( 'readonly' );
+  $( this ).closest( 'tr' ).find( 'input' ).focus();
+
 });
 
 

@@ -107,6 +107,15 @@ figcaption {
   padding-right: 12px;
 }
 
+input {
+  outline: none;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+
 
 /*form styling*/
 
