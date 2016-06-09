@@ -3,23 +3,20 @@
 $( '.wrapper' ).hover(function () {
     $( '.glyphicon-plus', this ).removeClass( 'hidden' );
 }, function () {
-    $( '.glyphicon-plus', this ).addClass('hidden');
+    $( '.glyphicon-plus', this ).addClass( 'hidden' );
 });
 
 
-$('table').on('click','.glyphicon-remove',function(e){
+$( 'table' ).on('click','.glyphicon-remove',function(e){
   e.preventDefault();
-  $(this).closest('tr').remove();
+  $( this ).closest( 'tr' ).remove();
 });
 
 
-$('table').on('click','.glyphicon-pencil',function(e){
+$( 'table' ).on('click','.glyphicon-pencil',function(e){
   e.preventDefault();
-  $(this).closest('tr').find('input').removeAttr('readonly');
+  $( this ).closest( 'tr' ).find( 'input' ).removeAttr( 'readonly' );
 });
-
-
-
 
 
 
