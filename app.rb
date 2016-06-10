@@ -1,31 +1,35 @@
 class TrumpApp < Sinatra::Base
 
   get '/' do
-
-    @hname1 = Hillaryname.find(1).name
-    @hname2 = Hillaryname.find(2).name
-    @hname3 = Hillaryname.find(3).name
-    @hdate1 = Hillaryname.find(1).updated_at.strftime("%m.%d.%Y")
-    @hdate2 = Hillaryname.find(2).updated_at.strftime("%m.%d.%Y")
-    @hdate3 = Hillaryname.find(3).updated_at.strftime("%m.%d.%Y")
-
-    @bname1 = Berniename.find(1).name
-    @bname2 = Berniename.find(2).name
-    @bname3 = Berniename.find(3).name
-    @bdate1 = Berniename.find(1).updated_at.strftime("%m.%d.%Y")
-    @bdate2 = Berniename.find(2).updated_at.strftime("%m.%d.%Y")
-    @bdate3 = Berniename.find(3).updated_at.strftime("%m.%d.%Y")
-
+    @hnames = Hillaryname.all
+    @bnames = Berniename.all
+    @name = Nickname.last
+    p "rendering layout"
     erb :layout
   end
 
-
 # DESTROY HILLARY NICKNAME
 
-  post '/hillary_d' do
-    @hname = Hillaryname.find(params[:hillary_name])
+  post '/hillary_d/:id' do
+    @hname = Hillaryname.find(params[:id])
+    p 'about to destroy ', @hname
     @hname.destroy
-    erb :layout
+    redirect '/'
+  end
+
+# DESTROY BERNIE NICKNAME
+
+  post '/bernie_d/:id' do
+    @bname = Berniename.find(params[:id])
+    p 'about to destroy ', @bname
+    @bname.destroy
+    redirect '/'
+  end
+
+
+  post '/hillarynames' do
+    p 'about to create'
+    redirect '/'
   end
 
 
@@ -36,13 +40,11 @@ class TrumpApp < Sinatra::Base
     description = Adjective.find_by_letter(name.last_name[0].upcase)
     tname = description.adjective
     name[:trump_name] = tname
-    if name.save
-     @name = name
-    else
-     redirect_to '/'
+    begin
+      name.save
+    ensure
+     redirect '/'
     end
-
-    erb :layout
   end
 
 end

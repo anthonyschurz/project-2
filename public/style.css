@@ -26,7 +26,7 @@ body {
   font-family: 'Nunito', sans-serif;
   background-color: rgba(233,29,14,0.55);
   border-left: 2px solid white;
-  height:50em;
+  height:44em;
   min-height:100%;
 }
 
@@ -38,6 +38,16 @@ body {
 }
 
 
+#mainheader {
+  display: inline-block;
+  color: #D4AF37;
+  text-shadow: -.5px 0 #FFF,0 .5px #FFF,.5px 0 #FFF,0 -.5px #FFF;
+	font: 65px 'Tinos';
+  padding: 10px 85px 0 80px;
+  text-align: center;
+}
+
+
 #sideheader {
   font-size: 22px;
   padding: 20px 15px 0 0;
@@ -45,13 +55,8 @@ body {
 }
 
 
-#mainheader {
-  display: inline-block;
-  color: #D4AF37;
-  -webkit-text-stroke: 2px black;
-	font: 65px 'Cinzel';
-  padding: 10px 85px 0 80px;
-  text-align: center;
+li {
+  cursor: pointer;
 }
 
 /*opponent images*/
@@ -102,17 +107,27 @@ figcaption {
   color: #337ab7 !important;
 }
 
-
 .glyphicon-pencil {
-  padding-right: 12px;
+  background-color: white;
+  padding: 5px;
+  border: .5px solid #eee;
+  border-radius: 3px;
 }
 
-input {
-  outline: none;
-  border: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
+#icon-input-btn {
+   display: inline-block;
+   position: relative;
+   background-color: white;
+   color: #337ab7;
+   font-weight: bolder;
+}
+
+.delete {
+  display: inline-block;
+  background-color: white;
+  padding: 3px 5px 1px 5px;
+  border: .5px solid #eee;
+  border-radius: 3px;
 }
 
 
@@ -164,9 +179,10 @@ input {
 /*social footer styling*/
 
 #footer {
-  position:relative;
+  position:absolute;
+  bottom: 20px;
   width:100%;
-  padding: 100px 0 20px 20px;
+  padding: 100px 0 0 20px;
 }
 
 #container {

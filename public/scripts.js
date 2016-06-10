@@ -14,7 +14,7 @@ $('#newhname').keypress(function (e) {
  var key = e.which;
  if(key == 13)  // the enter key code
  {
-   $('#hillary-table > tbody > tr:first').before('<tr><td id="newesthdate"></td><td><input value = " " readonly id="newesthname"></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td></tr>');
+   $('#hillary-table > tbody > tr:first').before('<tr><td id="newesthdate"></td><td><input value = " " readonly id="newesthname"></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><form action="/bernie_d/<%= bname.id %>" method="POST" id="icon-input-btn"><input class="delete" type="submit" value="❌" style="background-color: white; margin-left: 4px;"></form></td></tr>');
    $('#newesthname').val( $( this ).val() );
   //  Date
    var today = new Date();
@@ -39,8 +39,10 @@ $('#newbname').keypress(function (e) {
  var key = e.which;
  if(key == 13)  // the enter key code
  {
-   $('#bernie-table > tbody > tr:first').before('<tr><td id="newestbdate"></td><td><input value = " " readonly id="newestbname"></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td></tr>');
+   $('#bernie-table > tbody > tr:first').before('<tr><td id="newestbdate"></td><td><input value = " " readonly id="newestbname"></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><form action="/bernie_d/<%= bname.id %>" method="POST" id="icon-input-btn"><input class="delete" type="submit" value="❌" style="background-color: white; margin-left: 4px;"></form></td></tr>');
    $('#newestbname').val( $( this ).val() );
+
+
   //  Date
    var today = new Date();
    var dd = today.getDate();
@@ -59,8 +61,6 @@ $('#newbname').keypress(function (e) {
 });
 
 
-
-
 // Remove row from table
 
 $( 'table' ).on('click','.glyphicon-remove',function(e){
@@ -75,21 +75,21 @@ $( 'table' ).on('click','.glyphicon-pencil',function(e){
   e.preventDefault();
   $( this ).closest( 'tr' ).find( 'input' ).removeAttr( 'readonly' );
   $( this ).closest( 'tr' ).find( 'input' ).focus();
-
 });
 
 
+// Post table values
 
 
-// $('#hillary-input').on('keyup', function(e) {
-//     var table = document.getElementById("#hillary-table");
-//     var code = (e.keyCode ? e.keyCode : e.which);
-//     if (code == 13) {
-//         var row = table.insertRow(0);
-//         var cell1 = row.insertCell(0);
-//         var cell2 = row.insertCell(1);
-//
-//         cell1.innerHTML = "NEW CELL1";
-//         cell2.innerHTML = "NEW CELL2";
-//       }
-//     });
+$('form').submit(function() {
+    var valuesToSubmit = $(this).serialize();
+    $.ajax({
+        type: "POST",
+        url: $(this).attr('action'), //sumbits it to the given url of the form
+        data: valuesToSubmit,
+        dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+    }).success(function(json){
+        console.log("success", json);
+    });
+    return false; // prevents normal behaviour
+});
