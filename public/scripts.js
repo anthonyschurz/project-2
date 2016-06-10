@@ -14,8 +14,10 @@ $('#newhname').keypress(function (e) {
  var key = e.which;
  if(key == 13)  // the enter key code
  {
-   $('#hillary-table > tbody > tr:first').before('<tr><td id="newesthdate"></td><td><input value = " " readonly id="newesthname"></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><form action="/bernie_d/<%= bname.id %>" method="POST" id="icon-input-btn"><input class="delete" type="submit" value="❌" style="background-color: white; margin-left: 4px;"></form></td></tr>');
+   $('#hillary-table > tbody > tr:first').before('<tr><td id="newesthdate"></td><td><input name="h[name]" value = " " readonly onfocus="this.value = this.value;" class="highlight" id="newesthname"></td><td><div class="formactions"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><input class="delete" type="submit" data-id="<%= hname.id %>" value="❌" style="background-color: white;"></div></td></tr>');
    $('#newesthname').val( $( this ).val() );
+
+
   //  Date
    var today = new Date();
    var dd = today.getDate();
@@ -39,7 +41,7 @@ $('#newbname').keypress(function (e) {
  var key = e.which;
  if(key == 13)  // the enter key code
  {
-   $('#bernie-table > tbody > tr:first').before('<tr><td id="newestbdate"></td><td><input value = " " readonly id="newestbname"></td><td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><form action="/bernie_d/<%= bname.id %>" method="POST" id="icon-input-btn"><input class="delete" type="submit" value="❌" style="background-color: white; margin-left: 4px;"></form></td></tr>');
+   $('#bernie-table > tbody > tr:first').before('<tr><td id="newestbdate"></td><td><input name="b[name]" value = " " readonly onfocus="this.value = this.value;" class="highlight" id="newestbname"></td><td><div class="formactions"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><input class="delete" type="submit" data-id="<%= bname.id %>" value="❌" style="background-color: white;"></div></td></tr>');
    $('#newestbname').val( $( this ).val() );
 
 
@@ -92,6 +94,8 @@ $(document).ready(function(){
   });
 
 
+// HILLARY NAME SUBMISSION
+
 
   $('#formhillary').submit(function() {
     var valuesToSubmit = $(this).serialize();
@@ -102,11 +106,14 @@ $(document).ready(function(){
         data: valuesToSubmit,
         dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
     }).success(function(json){
+        $('#hillaryModal').modal('hide');
         console.log("success", json);
     });
     return false; // prevents normal behaviour
   });
 
+
+// BERNIE NAME SUBMISSION
 
 
   $('#formbernie').submit(function() {
@@ -118,6 +125,7 @@ $(document).ready(function(){
         data: valuesToSubmit,
         dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
     }).success(function(json){
+        $('#hillaryModal').modal('hide');
         console.log("success", json);
     });
     return false; // prevents normal behaviour

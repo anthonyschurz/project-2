@@ -28,14 +28,17 @@ class TrumpApp < Sinatra::Base
 
   post '/hillarynames' do
     p 'about to create hillary'
-    # foreach
+    hillaryname = Hillaryname.new(params[:h])
+    hillaryname.save
+    puts Hillaryname.name
+    erb:layout
   end
 
 # CREATE BERNIE NAMES
 
   post '/bernienames' do
     p 'about to create bernie'
-    # foreach
+    erb :layout
   end
 
 
