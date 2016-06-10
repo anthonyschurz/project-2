@@ -80,16 +80,47 @@ $( 'table' ).on('click','.glyphicon-pencil',function(e){
 
 // Post table values
 
+$(document).ready(function(){
+  $(".formactions input.delete").click(function() {
+    var id = $(this).data('id');
+    $.ajax({
+        type: "POST",
+        url: "/hillary_d/" + id
+    }).success(function(json){
+        console.log("success", json);
+    });
+  });
 
-// $('form.newModal').submit(function() {
-//     var valuesToSubmit = $(this).serialize();
-//     $.ajax({
-//         type: "POST",
-//         url: $(this).attr('action'), //sumbits it to the given url of the form
-//         data: valuesToSubmit,
-//         dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
-//     }).success(function(json){
-//         console.log("success", json);
-//     });
-//     return false; // prevents normal behaviour
-// });
+
+
+  $('#formhillary').submit(function() {
+    var valuesToSubmit = $(this).serialize();
+    // console.log(valuesToSubmit)
+    $.ajax({
+        type: "POST",
+        url: $(this).attr('action'), //sumbits it to the given url of the form
+        data: valuesToSubmit,
+        dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+    }).success(function(json){
+        console.log("success", json);
+    });
+    return false; // prevents normal behaviour
+  });
+
+
+
+  $('#formbernie').submit(function() {
+    var valuesToSubmit = $(this).serialize();
+    // console.log(valuesToSubmit)
+    $.ajax({
+        type: "POST",
+        url: $(this).attr('action'), //sumbits it to the given url of the form
+        data: valuesToSubmit,
+        dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+    }).success(function(json){
+        console.log("success", json);
+    });
+    return false; // prevents normal behaviour
+  });
+
+})

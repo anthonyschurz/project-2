@@ -14,7 +14,6 @@ class TrumpApp < Sinatra::Base
     @hname = Hillaryname.find(params[:id])
     p 'about to destroy ', @hname
     @hname.destroy
-    redirect '/'
   end
 
 # DESTROY BERNIE NICKNAME
@@ -23,12 +22,19 @@ class TrumpApp < Sinatra::Base
     @bname = Berniename.find(params[:id])
     p 'about to destroy ', @bname
     @bname.destroy
-    redirect '/'
   end
 
+# CREATE HILLARY NAMES
 
   post '/hillarynames' do
-    p 'about to create'
+    p 'about to create hillary'
+    # foreach
+  end
+
+# CREATE BERNIE NAMES
+
+  post '/bernienames' do
+    p 'about to create bernie'
     # foreach
   end
 
