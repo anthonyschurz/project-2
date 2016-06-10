@@ -4,8 +4,7 @@
   <title>Trump API</title>
   <!-- Trump Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Tinos' rel='stylesheet' type='text/css'>
-  <!-- Trump Favicon -->
+  <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>  <!-- Trump Favicon -->
   <link rel="shortcut icon" href="../favicon.png">
   <!-- Project CSS -->
   <link rel="stylesheet" type="text/css" href="../style.css">
@@ -84,8 +83,8 @@
 
     <div class="trumpname">
 
-    <% if @name %>
-      OK, <%= @name.trump_name %> <%= @name.first_name.capitalize %>
+    <% if @namer %>
+      OK, <%= @namer.trump_name %> <%= @namer.first_name.capitalize %>
     <% end %>
 
     </div>

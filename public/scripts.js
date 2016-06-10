@@ -63,7 +63,7 @@ $('#newbname').keypress(function (e) {
 
 // Remove row from table
 
-$( 'table' ).on('click','.glyphicon-remove',function(e){
+$( 'table' ).on('click','.delete',function(e){
   e.preventDefault();
   $( this ).closest( 'tr' ).remove();
 });
@@ -74,22 +74,22 @@ $( 'table' ).on('click','.glyphicon-remove',function(e){
 $( 'table' ).on('click','.glyphicon-pencil',function(e){
   e.preventDefault();
   $( this ).closest( 'tr' ).find( 'input' ).removeAttr( 'readonly' );
-  $( this ).closest( 'tr' ).find( 'input' ).focus();
+  $( this ).closest( 'tr' ).find( '.highlight' ).focus();
 });
 
 
 // Post table values
 
 
-$('form').submit(function() {
-    var valuesToSubmit = $(this).serialize();
-    $.ajax({
-        type: "POST",
-        url: $(this).attr('action'), //sumbits it to the given url of the form
-        data: valuesToSubmit,
-        dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
-    }).success(function(json){
-        console.log("success", json);
-    });
-    return false; // prevents normal behaviour
-});
+// $('form.newModal').submit(function() {
+//     var valuesToSubmit = $(this).serialize();
+//     $.ajax({
+//         type: "POST",
+//         url: $(this).attr('action'), //sumbits it to the given url of the form
+//         data: valuesToSubmit,
+//         dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+//     }).success(function(json){
+//         console.log("success", json);
+//     });
+//     return false; // prevents normal behaviour
+// });

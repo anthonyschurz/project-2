@@ -40,11 +40,18 @@ body {
 
 #mainheader {
   display: inline-block;
-  color: #D4AF37;
-  text-shadow: -.5px 0 #FFF,0 .5px #FFF,.5px 0 #FFF,0 -.5px #FFF;
-	font: 65px 'Tinos';
-  padding: 10px 85px 0 80px;
+  color: #C2A34F;
+  text-shadow: -.5px 0 #000,0 .5px #000,.5px 0 #000,0 -.5px #000;
+	font-family: 'Merriweather', serif;
+  font-size: 65px;
+  padding: 10px 65px 0 60px;
   text-align: center;
+}
+
+#mainheader h1 {
+  background-color: rgba(0, 0, 0, .5);
+  padding: 10px 20px 10px 20px;
+  border: 2px solid black;
 }
 
 

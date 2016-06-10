@@ -3,7 +3,7 @@ class TrumpApp < Sinatra::Base
   get '/' do
     @hnames = Hillaryname.all
     @bnames = Berniename.all
-    @name = Nickname.last
+    # @namer = Nickname.last
     p "rendering layout"
     erb :layout
   end
@@ -29,7 +29,7 @@ class TrumpApp < Sinatra::Base
 
   post '/hillarynames' do
     p 'about to create'
-    redirect '/'
+    # foreach
   end
 
 
@@ -40,11 +40,11 @@ class TrumpApp < Sinatra::Base
     description = Adjective.find_by_letter(name.last_name[0].upcase)
     tname = description.adjective
     name[:trump_name] = tname
-    begin
-      name.save
-    ensure
-     redirect '/'
-    end
+    @namer = name
+    name.save
+    puts @namer.trump_name
+    erb :layout
+
   end
 
 end
