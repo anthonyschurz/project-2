@@ -43,8 +43,18 @@ Original Mock Up:
 
 ![alt tag](http://i.imgur.com/ASL3NHB.jpg)
 
-This is an open source project and I welcome contributions, altough I know they will not be as great as my own.
+
+#Installation Instructions
+```
+* "gem install bundler"
+* "bundle install"
+* "rake db:create"
+* "rake db:migrate"
+* "shotgun" --> Runs Server
+```
 
 ![alt tag](http://i.imgur.com/mcEFKnh.jpg)
+
+This is an open source project and I welcome contributions, altough I know they will not be as great as my own.
 
 https://trello.com/b/Jdeuh7fS/trump-project
