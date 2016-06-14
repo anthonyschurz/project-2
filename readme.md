@@ -4,18 +4,17 @@
 
 Trump Names is the yuuuuggggeeee application that allows you to nickname my opponents or get your own name. Utilizing literally the best technologies on the planet, I am able to create nicknames for the user and my opponents as well as enlist the help of the user to edit and delete opponent names.
 
-Technologies
+#Technologies
 
-Ruby
-Sinatra
-ActiveRecord
-Jquery
-Ajax
-HTML
-CSS
-PostgeSQL
-Heroku
-GitHub
+*Ruby
+*Sinatra
+*ActiveRecord
+*Jquery
+*HTML
+*CSS
+*PostgeSQL
+*Heroku
+*GitHub
 
 
 
