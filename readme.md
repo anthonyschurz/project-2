@@ -1,4 +1,4 @@
-"I have the best full stack naming apllication. It's really terrific. My friends always tell me, 'Donald, you have such a fantastic full stack naming application.'"
+I have the best full stack naming apllication. It's really terrific. My friends always tell me, "Donald, you have such a fantastic full stack naming application."
 
 ![alt tag](http://i.imgur.com/MqGOJsW.jpg)
 
