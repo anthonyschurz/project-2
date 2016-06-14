@@ -6,15 +6,15 @@ Trump Names is the yuuuuggggeeee application that allows you to nickname my oppo
 
 #Technologies
 
-*Ruby
-*Sinatra
-*ActiveRecord
-*Jquery
-*HTML
-*CSS
-*PostgeSQL
-*Heroku
-*GitHub
+* Ruby
+* Sinatra
+* ActiveRecord
+* Jquery
+* HTML
+* CSS
+* PostgeSQL
+* Heroku
+* GitHub
 
 
 
