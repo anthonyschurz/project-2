@@ -16,7 +16,7 @@ Trump Names is the yuuuuggggeeee application that allows you to nickname my oppo
 * Heroku
 * GitHub
 
-##Concepts
+#Concepts
 
 * MVC
 * CRUD
