@@ -30,14 +30,14 @@ Are able to...
 * Read nicknames for Trump's opponents
 * Update the nicknames of Trump's opponents
 * Create nicknames for Trump's opponents
-* Delete nicknaes for Trump's opponents
+* Delete nicknames for Trump's opponents
 * Change the language settings of the page
 * Share the page on Twitter, Reddit, Email
 * View the project on Github
 
 #Planning
 
-This app was created as part of the Trump API project. I wanted to build out an endpoint that showcased Trump's expertise with namecalling.
+This app was created as part of the Trump API project. I wanted to build an endpoint that showcased Trump's expertise with namecalling.
 
 Original Mock Up:
 
