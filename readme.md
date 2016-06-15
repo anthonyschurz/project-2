@@ -2,7 +2,7 @@ I have the best full stack naming apllication. It's really terrific. My friends 
 
 ![alt tag](http://i.imgur.com/MqGOJsW.jpg)
 
-Trump Names is the yuuuuggggeeee application that allows you to nickname my opponents or get your own name. Utilizing literally the best technologies on the planet, I am able to create nicknames for the user and my opponents as well as enlist the help of the user to edit and delete opponent names.
+Trump Names is the yuuuuggggeeee application that allows you to nickname Donald's opponents or get your own name from the man himself.
 
 #Technologies
 
